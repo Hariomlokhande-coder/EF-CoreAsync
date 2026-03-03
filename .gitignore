@@ -1,0 +1,33 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+out/
+
+# NuGet packages
+*.nupkg
+packages/
+
+# EF Core Migrations (optional)
+
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Secret files
+appsettings.*.json
+
+# IDE files
+.idea/
+*.sln.iml
+
+# Node/npm (if using frontend)
+node_modules/
+wwwroot/lib/

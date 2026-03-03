@@ -1,0 +1,43 @@
+﻿@model EF_CoreAsync.Models.User
+
+@{
+    ViewData["Title"] = "User Details";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-sm">
+        <div class="card-header bg-info text-white">
+            <h4 class="mb-0">User Details</h4>
+        </div>
+
+        <div class="card-body">
+
+            <dl class="row">
+                <dt class="col-sm-3">Name</dt>
+                <dd class="col-sm-9">@Model.Name</dd>
+
+                <dt class="col-sm-3">Email</dt>
+                <dd class="col-sm-9">@Model.Email</dd>
+
+                <dt class="col-sm-3">Created</dt>
+                <dd class="col-sm-9">
+                    @Model.CreatedAt.ToString("dd MMM yyyy")
+                </dd>
+
+                <dt class="col-sm-3">Updated</dt>
+                <dd class="col-sm-9">
+                    @(Model.UpdatedAt.HasValue
+                                        ? Model.UpdatedAt.Value.ToString("dd MMM yyyy")
+                                        : "-")
+                </dd>
+            </dl>
+
+            <div class="d-flex justify-content-between mt-4">
+                <a asp-action="Index" class="btn btn-secondary">Back</a>
+                <a asp-action="Edit" asp-route-id="@Model.Id"
+                   class="btn btn-warning">Edit</a>
+            </div>
+
+        </div>
+    </div>
+</div>

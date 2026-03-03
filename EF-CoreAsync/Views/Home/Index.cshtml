@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container mt-5">
+
+    <div class="text-center mb-5">
+        <h1 class="fw-bold">User Management Dashboard</h1>
+        <p class="text-muted">Manage users efficiently with full CRUD operations.</p>
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0 text-center p-4">
+                <h4 class="mb-3">View Users</h4>
+                <p class="text-muted">See the complete list of registered users.</p>
+                <a asp-controller="Users"
+                   asp-action="Index"
+                   class="btn btn-dark">
+                    Go to Users
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0 text-center p-4">
+                <h4 class="mb-3">Add New User</h4>
+                <p class="text-muted">Create and register a new user.</p>
+                <a asp-controller="Users"
+                   asp-action="Create"
+                   class="btn btn-primary">
+                    Add User
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
